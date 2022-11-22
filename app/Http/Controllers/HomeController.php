@@ -63,13 +63,13 @@ class HomeController extends Controller
                 }
             }
 
-            $fastestAsteroids = Arr::sort($allAsteroids, function ($asteroid) {
+            $fastestAsteroids = array_reverse(Arr::sort($allAsteroids, function ($asteroid) {
                 return $asteroid['speed'];
-            });
+            }));
 
-            $closestAsteroids = Arr::sort($allAsteroids, function ($asteroid) {
+            $closestAsteroids = array_values(Arr::sort($allAsteroids, function ($asteroid) {
                 return $asteroid['distance'];
-            });
+            }));
 
             $allResponse = [
                 'closest' => $closestAsteroids[0],
@@ -82,6 +82,7 @@ class HomeController extends Controller
             ];
         }
 
+        dump($fastestAsteroids);
         return view('welcome', compact('allResponse'));
     }
 }
