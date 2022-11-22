@@ -84,7 +84,7 @@
     @if (!empty($allResponse))
         <div class="container w-full  mx-auto gap-5 px-5 py-2  my-6">
             <canvas id="myChart" height="100px"
-                class="bg-gray-200 rounded-lg lg:h-auto h-80 shadow  px-4 py-4 flex justify-center"></canvas>
+                class="bg-gray-200 rounded-lg shadow  px-4 py-4 flex justify-center"></canvas>
         </div>
         <script>
             var labels = {{ Js::from($allResponse['chartData']['lables']) }}
