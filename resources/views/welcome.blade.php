@@ -22,8 +22,8 @@
     <div class="row">
         <h1 class="text-center  text-3xl lg:mt-3 mt-6  font-extrabold text-white">Near Earth Object</h1>
     </div>
-    <div class="container  w-full mt-5 px-5 py-2 my-auto lg:my-6">
-        <div class="lg:w-3/3 justify-center  shadow-lg bg-gray-200  rounded-lg p-6 mt-10 md:mt-0 ">
+    <div class="container  w-full mt-5 px-5 mx-auto py-2 my-auto lg:my-6">
+        <div class="lg:w-full justify-center  shadow-lg bg-gray-200  rounded-lg p-6 mt-10 md:mt-0 ">
             <h1 class="text-purple-600 text-center mb-3 font-bold text-2xl">Select Date</h1>
             <form action="/">
                 <div class="relative mb-4">
@@ -82,9 +82,9 @@
     @endif
 
     @if (!empty($allResponse))
-        <div class="container w-full mx-auto gap-5 px-5 py-2  my-6">
+        <div class="container w-full  mx-auto gap-5 px-5 py-2  my-6">
             <canvas id="myChart" height="100px"
-                class="bg-gray-200 rounded-lg shadow  px-4 py-4 flex justify-center"></canvas>
+                class="bg-gray-200 rounded-lg lg:h-auto h-80 shadow  px-4 py-4 flex justify-center"></canvas>
         </div>
         <script>
             var labels = {{ Js::from($allResponse['chartData']['lables']) }}
