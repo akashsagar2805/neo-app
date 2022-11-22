@@ -82,7 +82,7 @@ class HomeController extends Controller
             ];
         }
 
-        dump($fastestAsteroids);
+
         return view('welcome', compact('allResponse'));
     }
 }
