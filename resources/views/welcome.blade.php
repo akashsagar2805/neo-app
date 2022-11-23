@@ -75,7 +75,7 @@
                 <h1 class="text-purple-700 text-center font-bold text-2xl">Average Size</h1>
                 <p
                     class="lg:text-md text-xs flex-inline p-3 mb-3 text-center lg:w-auto w-3/3 mx-auto mt-4 bg-white font-bold">
-                    {{ $allResponse['avgsize'] }}.kmph</p>
+                    {{ $allResponse['avgsize'] }} km</p>
 
             </div>
         </div>
